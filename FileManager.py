@@ -2,6 +2,9 @@
 from os.path import exists
 class FileManager():
     def __init__(self):
+        """
+        file manager is class for mange the fil show data , copy, delate so all
+        """
         print "welcome to file manager..."
         print "press to copy data file[1]: "
         print "press to delet the file[2]: "
