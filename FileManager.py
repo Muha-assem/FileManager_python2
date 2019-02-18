@@ -91,3 +91,7 @@ class FileManager():
                     break
             else:
                 print "Pleas try agin"
+
+    def __changepath__(self):
+        pass
+
