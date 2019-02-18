@@ -8,6 +8,7 @@ class FileManager():
         print "perss to change path[3]"
         print "press to show file data[4]: "
         print "press to longth of data[5]: "
+        print "press quit to exit"
         self.chooses()
 
     def chooses(self):
