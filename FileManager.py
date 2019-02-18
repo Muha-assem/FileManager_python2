@@ -36,4 +36,34 @@ class FileManager():
                     print "pleas choos number from 1 to 4 or [quit to exit]"
             except ValueError:
                 print "Pleas enter a valid number(*_*)"
+
+    def __copy__(self):
+        areyouwant = raw_input("do you want to copy files data [Y,N]? ")
+        areyouwant = areyouwant.lower()
+        if areyouwant == 'y':
+            while True:
+                filename = raw_input('input the full path of file: ')
+                is_exists = exists(filename)
+                if is_exists:
+                    pass
+                else:
+                    filename = filename.lower()
                 
+                if is_exists:
+                    filedist = raw_input('input the full path of distnation: ')
+                    openfile = open(filename)
+                    datafile = openfile.read()
+
+                    opendist = open(filedist,'a')
+                    writeondist = opendist.write('\n' + datafile)
+                    
+                    opendist.close()
+                    openfile.close()
+
+                    print "Copied Successfully!!!"
+                elif filename == 'quit':
+                    break
+                else:
+                    print "Pleas enter the full path agin"
+        else:
+            print "thanks..."
