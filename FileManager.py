@@ -95,7 +95,7 @@ class FileManager():
     def __changepath__(self):
         pass
 
-   def __showdata__(self):
+    def __showdata__(self):
         while True:
             filename = raw_input('Enter the full path of file: ')
             is_exists = exists(filename)
