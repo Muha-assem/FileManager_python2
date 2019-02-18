@@ -67,3 +67,27 @@ class FileManager():
                     print "Pleas enter the full path agin"
         else:
             print "thanks..."
+
+
+
+    def __delat__(self):
+        import os
+        while True:
+            filename = raw_input('input the full path of file you want to remove: ')
+            is_exists = exists(filename)
+            if is_exists:
+                pass
+            else:
+                filename = filename.lower()
+            
+            if filename == 'quit' and not is_exists:
+                break
+            elif is_exists:
+                sur = raw_input('are you suer you want remove[Y,N]??')
+                sur = sur.lower()
+                if sur == 'y':
+                    os.remove(filename)
+                else:
+                    break
+            else:
+                print "Pleas try agin"
