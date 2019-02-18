@@ -112,3 +112,22 @@ class FileManager():
                 print data + '\n \n completed successfully!!! '
             else:
                 print "Pleas enter the path agin."
+
+    def __datalen__(self):
+        while True:
+            filename = raw_input('Enter the full path of file: ')
+            is_exists = exists(filename)
+            if is_exists:
+                pass
+            else:
+                filename = filename.lower()
+            print "This file is exists? %s" % is_exists
+            if is_exists:
+                openfile = open(filename)
+                data = openfile.read()
+                print len(data)
+                print '\nSuccessfully Completed!!!'
+            elif filename == 'quit' and not is_exists:
+                break
+            else:
+                print "Pleas enter the file name agin"
