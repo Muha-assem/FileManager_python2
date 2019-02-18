@@ -131,3 +131,6 @@ class FileManager():
                 break
             else:
                 print "Pleas enter the file name agin"
+
+
+fil = FileManager()
