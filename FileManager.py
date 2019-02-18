@@ -95,3 +95,20 @@ class FileManager():
     def __changepath__(self):
         pass
 
+   def __showdata__(self):
+        while True:
+            filename = raw_input('Enter the full path of file: ')
+            is_exists = exists(filename)
+            if is_exists:
+                pass
+            else:
+                filename = filename.lower()
+            
+            if filename == 'quit' and not is_exists:
+                break
+            elif is_exists:
+                openfile = open(filename)
+                data = openfile.read()
+                print data + '\n \n completed successfully!!! '
+            else:
+                print "Pleas enter the path agin."
